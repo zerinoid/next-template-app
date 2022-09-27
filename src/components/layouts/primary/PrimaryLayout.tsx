@@ -1,11 +1,20 @@
+import Head from 'next/head';
+import { ReactElement } from 'react';
 import styles from './PrimaryLayout.module.css';
 
 export interface IPrimaryLayout {
-  sampleTextProp: string;
+  children: ReactElement;
 }
 
-const PrimaryLayout: React.FC<IPrimaryLayout> = ({ sampleTextProp }) => {
-  return <div className={styles.container}>{sampleTextProp}</div>;
+const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {
+  return (
+    <>
+      <Head>
+        <title>Primary Layout Example</title>
+      </Head>
+      <main className={styles.main}>{children}</main>
+    </>
+  );
 };
 
 export default PrimaryLayout;

@@ -3,7 +3,7 @@ import { ReactElement } from 'react';
 import styles from './PrimaryLayout.module.css';
 
 export interface IPrimaryLayout {
-  children: ReactElement;
+  children: ReactElement | ReactElement[];
 }
 
 const PrimaryLayout: React.FC<IPrimaryLayout> = ({ children }) => {

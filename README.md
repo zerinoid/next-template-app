@@ -10,4 +10,4 @@ yarn dev
 
 ## Inspirações:
 
-[1](https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7)
+[How to build scalable architecture](https://dev.to/alexeagleson/how-to-build-scalable-architecture-for-your-nextjs-project-2pb7)

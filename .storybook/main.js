@@ -1,13 +1,16 @@
 module.exports = {
-  "stories": ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
-  "staticDirs": ['../public'],
-  "addons": [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "storybook-addon-next"
+  stories: ['../**/*.stories.mdx', '../**/*.stories.@(js|jsx|ts|tsx)'],
+  staticDirs: ['../public'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    '@storybook/addon-interactions'
   ],
-  "core": {
-    "builder": "webpack5"
+  framework: {
+    name: '@storybook/nextjs',
+    options: {}
+  },
+  docs: {
+    autodocs: true
   }
-}
+};

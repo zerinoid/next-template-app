@@ -1,6 +1,6 @@
 ## Getting Started
 
-App template para testes de layout, arquitetura e biblioteca de componentes
+App template for layout, architecture and component library testing
 
 ```bash
 npm run dev

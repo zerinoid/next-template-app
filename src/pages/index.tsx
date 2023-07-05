@@ -1,7 +1,7 @@
-import CatCard from '../src/components/cards/cat/CatCard';
-import { mockCatCardProps } from '../src/components/cards/cat/CatCard.mocks';
-import PrimaryLayout from '../src/components/layouts/primary/PrimaryLayout';
-import SidebarLayout from '../src/components/layouts/sidebar/SidebarLayout';
+import CatCard from '../components/cards/cat/CatCard';
+import { mockCatCardProps } from '../components/cards/cat/CatCard.mocks';
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
+import SidebarLayout from '../components/layouts/sidebar/SidebarLayout';
 import styles from '../styles/Home.module.css';
 import { NextPageWithLayout } from './_app';
 

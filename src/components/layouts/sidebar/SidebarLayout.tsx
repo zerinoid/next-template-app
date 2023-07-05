@@ -1,9 +1,7 @@
 import Link from 'next/link';
 import styles from './SidebarLayout.module.css';
 
-export interface ISidebarLayout {}
-
-const SidebarLayout: React.FC<ISidebarLayout> = () => {
+const SidebarLayout: React.FC = () => {
   return (
     <nav className={styles.nav}>
       <input className={styles.input} placeholder="Search..." />

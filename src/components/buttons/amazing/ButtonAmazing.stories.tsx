@@ -1,24 +1,30 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import ButtonAmazing, { IButtonAmazing } from './ButtonAmazing';
+import type { Meta, StoryObj } from '@storybook/react';
+import ButtonAmazing from './ButtonAmazing';
 import { mockButtonAmazingProps } from './ButtonAmazing.mocks';
 
-export default {
+const meta: Meta<typeof ButtonAmazing> = {
   title: 'buttons/ButtonAmazing',
   component: ButtonAmazing,
-  argTypes: {}
-} as ComponentMeta<typeof ButtonAmazing>;
+  tags: ['autodocs'],
+  argTypes: {
+    primary: {
+      control: 'boolean'
+    }
+  }
+};
 
-const Template: ComponentStory<typeof ButtonAmazing> = args => (
-  <ButtonAmazing {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof ButtonAmazing>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  ...mockButtonAmazingProps.base,
-  primary: true
-} as IButtonAmazing;
+export const Primary: Story = {
+  args: {
+    ...mockButtonAmazingProps.base,
+    primary: true
+  }
+};
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  ...mockButtonAmazingProps.base
-} as IButtonAmazing;
+export const Secondary: Story = {
+  args: {
+    ...mockButtonAmazingProps.base
+  }
+};

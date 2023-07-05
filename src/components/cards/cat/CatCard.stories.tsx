@@ -1,17 +1,20 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import CatCard, { ICatCard } from './CatCard';
+import type { Meta, StoryObj } from '@storybook/react';
+import CatCard from './CatCard';
 import { mockCatCardProps } from './CatCard.mocks';
 
-export default {
+const meta: Meta<typeof CatCard> = {
   title: 'cards/CatCard',
   component: CatCard,
+  tags: ['autodocs'],
   argTypes: {}
-} as ComponentMeta<typeof CatCard>;
+};
 
-const Template: ComponentStory<typeof CatCard> = args => <CatCard {...args} />;
+export default meta;
 
-export const Base = Template.bind({});
+type Story = StoryObj<typeof CatCard>;
 
-Base.args = {
-  ...mockCatCardProps.base
-} as ICatCard;
+export const Base: Story = {
+  args: {
+    ...mockCatCardProps.base
+  }
+};

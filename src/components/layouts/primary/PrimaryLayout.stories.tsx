@@ -1,19 +1,19 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import PrimaryLayout, { IPrimaryLayout } from './PrimaryLayout';
+import type { Meta, StoryObj } from '@storybook/react';
+import PrimaryLayout from './PrimaryLayout';
 import { mockPrimaryLayoutProps } from './PrimaryLayout.mocks';
 
-export default {
+const meta: Meta<typeof PrimaryLayout> = {
   title: 'layouts/PrimaryLayout',
   component: PrimaryLayout,
+  tags: ['autodocs'],
   argTypes: {}
-} as ComponentMeta<typeof PrimaryLayout>;
+};
 
-const Template: ComponentStory<typeof PrimaryLayout> = args => (
-  <PrimaryLayout {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof PrimaryLayout>;
 
-export const Base = Template.bind({});
-
-Base.args = {
-  ...mockPrimaryLayoutProps.base
-} as IPrimaryLayout;
+export const Base: Story = {
+  args: {
+    ...mockPrimaryLayoutProps.base
+  }
+};

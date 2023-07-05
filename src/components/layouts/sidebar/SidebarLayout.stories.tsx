@@ -1,19 +1,16 @@
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import SidebarLayout, { ISidebarLayout } from './SidebarLayout';
-import { mockSidebarLayoutProps } from './SidebarLayout.mocks';
+import type { Meta, StoryObj } from '@storybook/react';
+import SidebarLayout from './SidebarLayout';
 
-export default {
+const meta: Meta<typeof SidebarLayout> = {
   title: 'layouts/SidebarLayout',
   component: SidebarLayout,
+  tags: ['autodocs'],
   argTypes: {}
-} as ComponentMeta<typeof SidebarLayout>;
+};
 
-const Template: ComponentStory<typeof SidebarLayout> = args => (
-  <SidebarLayout {...args} />
-);
+export default meta;
+type Story = StoryObj<typeof SidebarLayout>;
 
-export const Base = Template.bind({});
-
-Base.args = {
-  ...mockSidebarLayoutProps.base
-} as ISidebarLayout;
+export const Base: Story = {
+  args: {}
+};
